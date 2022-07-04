@@ -6,8 +6,8 @@ reverse_emotion_dict = {0: 'anger', 1: 'disgust', 2: 'fear', 3: 'joy', 4: 'sadne
 
 def load_saved_model():
     '''Loads the pretrained models'''
-    model = tf.keras.models.load_model('saved_model/my_model.h5')
-    with open('saved_model/vectorizer.pkl', 'rb') as f:
+    model = tf.keras.models.load_model('app/saved_model/my_model.h5')
+    with open('app/saved_model/vectorizer.pkl', 'rb') as f:
         vectorizer_dict = pkl.load(f)
     vectorizer = tf.keras.layers.TextVectorization.from_config(vectorizer_dict['config'])
 #    vectorizer.adapt(tf.data.Dataset.from_tensor_slices([' ']).batch(200))
