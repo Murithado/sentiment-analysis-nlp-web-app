@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import sentiment
+from app import sentiment
 
 app = Flask(__name__)
 
